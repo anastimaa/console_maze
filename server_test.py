@@ -134,7 +134,7 @@ def mock_connections(reset_game_state):
 def test_initial_game_state_sent(mock_socket, reset_game_state, mock_connections, player_id):
     mock_socket.recv.return_value = b''
     connections[player_id] = mock_socket
-    handle_client(mock_socket, ('127.0.0.1', 65000), player_id)
+    handle_client(mock_socket, ('0.0.0.0', 65434), player_id)
     mock_socket.sendall.assert_called_once_with(pickle.dumps(game_state))
     mock_socket.close.assert_called_once()
 
@@ -146,14 +146,14 @@ def test_player_movement(mock_socket, reset_game_state, mock_connections):
     mock_socket.recv.side_effect = [pickle.dumps(move), b'']
     connections[1] = mock_socket
     with patch("server.process_player_move") as mock_process_move:
-        handle_client(mock_socket, ('127.0.0.1', 65000), 1)
+        handle_client(mock_socket, ('0.0.0.0', 65434), 1)
         mock_process_move.assert_called_once_with(1, move)
 
 
 def test_client_disconnect(mock_socket, reset_game_state, mock_connections):
     mock_socket.recv.return_value = b''
     connections[1] = mock_socket
-    handle_client(mock_socket, ('127.0.0.1', 65000), 1)
+    handle_client(mock_socket, ('0.0.0.0', 65434), 1)
     mock_socket.close.assert_called_once()
 
 
@@ -162,7 +162,7 @@ def test_invalid_game_code(mock_socket, reset_game_state, mock_connections):
     invalid_move = {"codegame": 7, "level": 1}
     mock_socket.recv.side_effect = [pickle.dumps(invalid_move), b'']
     connections[1] = mock_socket
-    handle_client(mock_socket, ('127.0.0.1', 65000), 1)
+    handle_client(mock_socket, ('127.0.0.1', 65434), 1)
     assert "wrong code" in game_state["message"]
     assert "7" in game_state["message"]
     mock_socket.close.assert_called_once()
@@ -172,7 +172,7 @@ def test_handle_client_with_unexpected_exception(mock_socket, reset_game_state):
     mock_socket.recv.side_effect = Exception("Unexpected error during receiving data")
     connections[1] = mock_socket
     with pytest.raises(Exception):
-        handle_client(mock_socket, ('127.0.0.1', 65000), 1)
+        handle_client(mock_socket, ('0.0.0.0', 65434), 1)
     mock_socket.close.assert_called_once()
     assert 1 not in connections
 
@@ -220,11 +220,11 @@ def test_main_function_successful(mock_thread_start, mock_socket):
     mock_socket_instance.__enter__ = Mock(return_value=mock_socket_instance)
     mock_socket_instance.__exit__ = Mock(return_value=None)
     mock_socket.return_value = mock_socket_instance
-    mock_socket_instance.accept.return_value = (mock_socket_instance, ('127.0.0.1', 65000))
+    mock_socket_instance.accept.return_value = (mock_socket_instance, ('0.0.0.0', 65434))
     with patch("builtins.print"):
         main()
     mock_socket.assert_called_once_with(socket.AF_INET, socket.SOCK_STREAM)
-    mock_socket_instance.bind.assert_called_once_with(('127.0.0.1', 65000))
+    mock_socket_instance.bind.assert_called_once_with(('0.0.0.0', 65434))
     mock_socket_instance.listen.assert_called_once_with(2)
     assert mock_thread_start.call_count > 0
 

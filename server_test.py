@@ -94,9 +94,8 @@ def test_player_hits_mob(fixed_game):
 
 
 def test_player_opens_door_without_key(fixed_game):
-    process_player_move(1, "diagonally")  
-    assert game_state["players"][1]["x"] == 1
-    assert game_state["players"][1]["y"] == 1
+    result = process_player_move(1, "diagonally")
+    assert result is False
     
 
 @pytest.fixture

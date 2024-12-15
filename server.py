@@ -165,7 +165,7 @@ def process_player_move(player_id, move):
         elif move == "right":
             new_y, new_x = current_y, current_x + 1
         else:
-            return
+            return False 
 
         game_state["message"] = ""
 

@@ -198,4 +198,27 @@ if player["lives"] == 0:
     print(f"Player {player_id} lost! The other player is winner!")
 ```
 ## Скриншоты
+1. Меню у первого игрока
+![Снимок экрана 2024-12-14 230410](https://github.com/user-attachments/assets/6ad5980b-2a76-4427-92a9-97789fe78d04)
+2. Меню у второго игрока
+![Снимок экрана 2024-12-14 230516](https://github.com/user-attachments/assets/338ff980-f4ec-404f-bc8d-f976763f689c)
+3. Начало игры
+![Снимок экрана 2024-12-14 230531](https://github.com/user-attachments/assets/89bd802c-7922-499c-b4de-80d20e2b52b7)
+4. Столкновение с мобом
+![Снимок экрана 2024-12-14 230605](https://github.com/user-attachments/assets/ff924460-44f8-4a66-905f-30de0bdafeb8)
+5. Сбор ключа
+![Снимок экрана 2024-12-14 230629](https://github.com/user-attachments/assets/4b6ade98-3c8c-49b4-a27f-c7475a73f9a6)
+6. Сбор алмаза
+![Снимок экрана 2024-12-14 230659](https://github.com/user-attachments/assets/7137d585-746c-4bac-9fcc-5db748ed9b8c)
+7. Открытие двери
+![Снимок экрана 2024-12-14 230718](https://github.com/user-attachments/assets/695a8c76-1b6d-4acf-8512-37620fa7d97f)
+8. Конец игры
+![Снимок экрана 2024-12-14 230738](https://github.com/user-attachments/assets/de802834-bdd6-4a57-85ee-b79517c570be)
+
+
+
+
+
+
+
  

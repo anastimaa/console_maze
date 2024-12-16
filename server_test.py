@@ -211,21 +211,27 @@ def test_broadcast_game_state_connection_error(mock_connections, reset_game_stat
     assert 2 in connections
 
 
-# Тестирование функции main 
+# Тестирование функции main
 @patch("socket.socket")
 @patch("threading.Thread.start")
 def test_main_function_successful(mock_thread_start, mock_socket):
     mock_socket_instance = Mock()
+    mock_socket_instance.bind = Mock()
+    mock_socket_instance.listen = Mock()
+    mock_socket_instance.accept = Mock(side_effect=[
+        (mock_socket_instance, ('0.0.0.0', 65434)),
+        (mock_socket_instance, ('0.0.0.0', 65434))
+    ])
     mock_socket_instance.__enter__ = Mock(return_value=mock_socket_instance)
     mock_socket_instance.__exit__ = Mock(return_value=None)
     mock_socket.return_value = mock_socket_instance
-    mock_socket_instance.accept.return_value = (mock_socket_instance, ('0.0.0.0', 65434))
     with patch("builtins.print"):
         main()
     mock_socket.assert_called_once_with(socket.AF_INET, socket.SOCK_STREAM)
     mock_socket_instance.bind.assert_called_once_with(('0.0.0.0', 65434))
     mock_socket_instance.listen.assert_called_once_with(2)
-    assert mock_thread_start.call_count > 0
+    assert mock_socket_instance.accept.call_count == 2
+    assert mock_thread_start.call_count == 2
 
 
 @patch("socket.socket")

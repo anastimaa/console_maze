@@ -163,7 +163,7 @@ def process_player_move(player_id, move):
         elif move == "right":
             new_y, new_x = current_y, current_x + 1
         else:
-            return False
+            raise ValueError(f"Invalid move direction: {move}")
 
         game_state["message"] = ""
 

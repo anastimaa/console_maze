@@ -266,6 +266,7 @@ def handle_client(conn, addr, player_id):
 
     except Exception as e:
         print(f"Error with Player {player_id}: {e}")
+        raise
 
     finally:
         conn.close()

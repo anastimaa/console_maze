@@ -148,6 +148,7 @@ def process_player_move(player_id, move):
     :param move: Направление хода ("up", "down", "left", "right")
     :type move: str
     :return: None
+    :raises ValueError: Если направление хода не является допустимым
     """
     global game_state
     with lock:

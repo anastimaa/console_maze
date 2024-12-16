@@ -1,0 +1,746 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  
+
+  <head>
+    
+    <title>final_final.server</title>
+    <meta name="generator" content="pydoctor 24.11.0"> 
+        
+    </meta>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+    <link rel="stylesheet" type="text/css" href="extra.css" />
+    
+</head>
+
+  <body>
+
+    
+
+    <nav class="navbar navbar-default mainnavbar">
+      
+  
+  <div class="container-fluid">
+
+
+    <div class="navbar-header">
+      
+      <div class="navlinks">
+        <span class="navbar-brand">
+          final_final <a href="index.html">API Documentation</a>
+        </span>
+
+        <a href="moduleIndex.html">
+          Modules
+        </a>
+
+        <a href="classIndex.html">
+          Classes
+        </a>
+
+        <a href="nameIndex.html">
+          Names
+        </a>
+
+        <div id="search-box-container">
+          <div class="input-group">
+            <input id="search-box" type="search" name="search-query" placeholder="Search..." aria-label="Search" minlength="2" class="form-control" autocomplete="off" />
+            
+            <span class="input-group-btn">
+              <a style="display: none;" class="btn btn-default" id="search-clear-button" title="Clear" onclick="clearSearch()"><img src="fonts/x-circle.svg" alt="Clear" /></a>
+              <a class="btn btn-default" id="apidocs-help-button" title="Help" href="apidocs-help.html"><img src="fonts/info.svg" alt="Help" /></a>
+            </span>
+          </div>
+        </div>
+
+      </div>
+
+      <div id="search-results-container" style="display: none;">
+        
+        <div id="search-buttons">
+          <span class="label label-default" id="search-docstrings-button">
+          <label class="checkbox-inline">
+            <input type="checkbox" id="toggle-search-in-docstrings-checkbox" value="false" onclick="toggleSearchInDocstrings()">
+              search in docstrings
+            </input>
+          </label>
+          </span>
+          
+        </div>
+        
+        <noscript>
+            <h1>Cannot search: JavaScript is not supported/enabled in your browser.</h1>
+        </noscript>
+
+        <div id="search-status"> </div>
+
+        <div class="warning" id="search-warn-box" style="display: none;">
+          <p class="rst-last"><span id="search-warn"></span></p>
+        </div>
+
+        <table id="search-results">
+          <!-- Filled dynamically by JS -->
+        </table>
+        
+        <div style="margin-top: 10px;">
+          <p>For more information on the search, visit the <a href="apidocs-help.html#rst-search">help page</a>.</p>
+        </div>
+      </div>
+
+    </div>
+
+
+  </div>
+</nav>
+    
+    <div class="container-fluid">
+
+      <!-- Side navigation -->
+      <div class="sidebarcontainer" style="display: none;">
+        
+        <div class="sidebar"><nav class="sidebar">
+  
+
+  <div>
+
+      <div class="thingTitle">
+        <span>Module</span>
+        <code class="thisobject"><a href="final_final.server.html" class="internal-link" title="This module">server</a></code> 
+      </div>
+      
+      <div>
+        
+
+        
+         
+
+        
+        
+
+        <div class="childrenKindTitle">Functions</div>
+        <ul>
+    
+    <li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#broadcast_game_state" class="internal-link" title="final_final.server.broadcast_game_state">broadcast<wbr></wbr>_game<wbr></wbr>_state</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#checkstep" class="internal-link" title="final_final.server.checkstep">checkstep</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#generate_maze" class="internal-link" title="final_final.server.generate_maze">generate<wbr></wbr>_maze</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#handle_client" class="internal-link" title="final_final.server.handle_client">handle<wbr></wbr>_client</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#main" class="internal-link" title="final_final.server.main">main</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#process_player_move" class="internal-link" title="final_final.server.process_player_move">process<wbr></wbr>_player<wbr></wbr>_move</a></code>
+            </div>
+        
+
+    </li>
+</ul> 
+
+        
+         
+
+        <div class="childrenKindTitle">Variables</div>
+        <ul>
+    
+    <li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#HOST" class="internal-link" title="final_final.server.HOST">HOST</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#PORT" class="internal-link" title="final_final.server.PORT">PORT</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#connections" class="internal-link" title="final_final.server.connections">connections</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#game_state" class="internal-link" title="final_final.server.game_state">game<wbr></wbr>_state</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#lock" class="internal-link" title="final_final.server.lock">lock</a></code>
+            </div>
+        
+
+    </li>
+</ul> 
+
+        
+         
+        
+      </div>
+  </div><div>
+
+      <div class="thingTitle">
+        <span>Package</span>
+        <code><a href="index.html" class="internal-link" title="The parent of this module">final<wbr></wbr>_final</a></code> 
+      </div>
+      
+      <div>
+        
+
+        <div class="childrenKindTitle">Modules</div>
+        <ul>
+    
+    <li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="final_final.client_test.html" class="internal-link" title="final_final.client_test">client<wbr></wbr>_test</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="final_final.dfsmaze.html" class="internal-link" title="final_final.dfsmaze">dfsmaze</a></code>
+            </div>
+        
+
+    </li><li class=" thisobject">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="final_final.server.html" class="internal-link" title="final_final.server">server</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="final_final.server_test.html" class="internal-link" title="final_final.server_test">server<wbr></wbr>_test</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="final_final.%D1%81lient.html" class="internal-link" title="final_final.сlient">сlient</a></code>
+            </div>
+        
+
+    </li>
+</ul> 
+
+        
+        
+
+        
+         
+
+        
+         
+
+        
+         
+
+        
+         
+        
+      </div>
+  </div>
+
+</nav>
+        </div>
+        <div id="collapseSideBar">
+          <a class="btn btn-link" onclick="toggleSideBarCollapse()" title="Toggle Sidebar Collapse">
+          </a>
+        </div> 
+        <script src="sidebartoggle.js" type="text/javascript"></script>
+       
+      </div>
+
+      <div id="main" class="">
+        
+
+        
+
+        <div class="page-header">
+          <h1 class="module"><code><code><a href="index.html" class="internal-link">final_final</a></code><wbr></wbr>.<code><a href="final_final.server.html" class="internal-link" title="final_final.server">server</a></code></code></h1>
+          <div id="showPrivate">
+            <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+          </div>
+        </div>
+
+        <div class="categoryHeader">
+          module documentation
+        </div>
+
+        <div class="extrasDocstring">
+          
+          <p></p>
+        </div>
+
+        <div class="moduleDocstring">
+          <div><p class="undocumented">Undocumented</p></div>
+        </div>
+
+        <div id="splitTables">
+          <table class="children sortable" id="id4">
+  
+  
+  <tr class="function">
+    
+    <td>Function</td>
+    <td><code><a href="#broadcast_game_state" class="internal-link" title="final_final.server.broadcast_game_state">broadcast<wbr></wbr>_game<wbr></wbr>_state</a></code></td>
+    <td>Отправляет обновленное состояние игры всем подключенным игрокам. Если клиент отключен или возникает ошибка, сервер логирует событие.</td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><code><a href="#checkstep" class="internal-link" title="final_final.server.checkstep">checkstep</a></code></td>
+    <td>Проверяет возможность хода игрока.</td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><code><a href="#generate_maze" class="internal-link" title="final_final.server.generate_maze">generate<wbr></wbr>_maze</a></code></td>
+    <td>Создает лабиринт для указанного уровня сложности. В лабиринт входят: расстановка мобов, ключей, алмазов, стартовая позиция игроков, выход и двери.</td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><code><a href="#handle_client" class="internal-link" title="final_final.server.handle_client">handle<wbr></wbr>_client</a></code></td>
+    <td>Обрабатывает подключение клиента, получает от него данные, обновляет состояние игры и отправляет обновленные данные всем игрокам. Эта функция запускается в отдельном потоке для каждого подключившегося клиента...</td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><code><a href="#main" class="internal-link" title="final_final.server.main">main</a></code></td>
+    <td>Основная функция для запуска сервера игры. Она: 1. Инициализирует сокет для приема TCP-соединений. 2. Прослушивает указанный адрес (HOST) и порт (PORT). 3. Ждет подключения двух игроков. 4. Запускает обработку каждого игрока в отдельном потоке...</td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><code><a href="#process_player_move" class="internal-link" title="final_final.server.process_player_move">process<wbr></wbr>_player<wbr></wbr>_move</a></code></td>
+    <td>Обрабатывает ход игрока.</td>
+  </tr><tr class="constant">
+    
+    <td>Constant</td>
+    <td><code><a href="#HOST" class="internal-link" title="final_final.server.HOST">HOST</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="constant">
+    
+    <td>Constant</td>
+    <td><code><a href="#PORT" class="internal-link" title="final_final.server.PORT">PORT</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><code><a href="#connections" class="internal-link" title="final_final.server.connections">connections</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><code><a href="#game_state" class="internal-link" title="final_final.server.game_state">game<wbr></wbr>_state</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><code><a href="#lock" class="internal-link" title="final_final.server.lock">lock</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr>
+</table>
+          
+
+            
+        </div>
+
+        <div id="childList">
+          <div class="basefunction">
+  
+  
+  <a name="final_final.server.broadcast_game_state">
+    
+  </a>
+  <a name="broadcast_game_state">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">broadcast_game_state</span><span class="function-signature">()</span>:
+    
+    <a class="headerLink" href="#broadcast_game_state" title="final_final.server.broadcast_game_state">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p>Отправляет обновленное состояние игры всем подключенным игрокам.
+Если клиент отключен или возникает ошибка, сервер логирует событие.</p><table class="fieldTable"><tr class="fieldStart"><td class="fieldName" colspan="2">Returns</td></tr><tr><td colspan="2">None</td></tr><tr class="fieldStart"><td class="fieldName" colspan="2">Raises</td></tr><tr><td class="fieldArgContainer"><code>Exception</code></td><td>Ошибка отправки данных клиенту.</td></tr></table></div>
+  </div>
+</div><div class="basefunction">
+  
+  
+  <a name="final_final.server.checkstep">
+    
+  </a>
+  <a name="checkstep">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">checkstep</span><span class="function-signature">(x, y, player_id)</span>:
+    
+    <a class="headerLink" href="#checkstep" title="final_final.server.checkstep">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p>Проверяет возможность хода игрока.</p><table class="fieldTable"><tr class="fieldStart"><td class="fieldName" colspan="2">Parameters</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">x:</span>int</td><td class="fieldArgDesc">Координата x</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">y:</span>int</td><td class="fieldArgDesc">Координата y</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">player<wbr></wbr>_id:</span>int</td><td class="fieldArgDesc">Номер игрока</td></tr><tr class="fieldStart"><td class="fieldName" colspan="2">Returns</td></tr><tr><td class="fieldArgContainer">bool</td><td class="fieldArgDesc">True, если игрок может пройти на указанную клетку; иначе False</td></tr><tr class="fieldStart"><td class="fieldName" colspan="2">Raises</td></tr><tr><td class="fieldArgContainer"><code>IndexError</code></td><td>Если координаты x или y находятся вне границ лабиринта.</td></tr><tr><td class="fieldArgContainer"><code>KeyError</code></td><td>Если указанного игрока (player_id) нет в текущем состоянии игры.</td></tr></table></div>
+  </div>
+</div><div class="basefunction">
+  
+  
+  <a name="final_final.server.generate_maze">
+    
+  </a>
+  <a name="generate_maze">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">generate_maze</span><span class="function-signature">(level)</span>:
+    
+    <a class="headerLink" href="#generate_maze" title="final_final.server.generate_maze">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p>Создает лабиринт для указанного уровня сложности.
+В лабиринт входят: расстановка мобов, ключей, алмазов,
+стартовая позиция игроков, выход и двери.</p><table class="fieldTable"><tr class="fieldStart"><td class="fieldName" colspan="2">Parameters</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">level:</span>int</td><td class="fieldArgDesc">Уровень сложности (1, 2 или 3)</td></tr><tr class="fieldStart"><td class="fieldName" colspan="2">Returns</td></tr><tr><td class="fieldArgContainer">list[list[str]]</td><td class="fieldArgDesc">Лабиринт в виде двумерного списка</td></tr><tr class="fieldStart"><td class="fieldName" colspan="2">Raises</td></tr><tr><td class="fieldArgContainer"><code>ValueError</code></td><td>Если передан неверный уровень сложности (не 1, 2 или 3)</td></tr></table></div>
+  </div>
+</div><div class="basefunction">
+  
+  
+  <a name="final_final.server.handle_client">
+    
+  </a>
+  <a name="handle_client">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">handle_client</span><span class="function-signature">(conn, addr, player_id)</span>:
+    
+    <a class="headerLink" href="#handle_client" title="final_final.server.handle_client">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p>Обрабатывает подключение клиента, получает от него данные, обновляет состояние игры и отправляет обновленные данные всем игрокам.
+Эта функция запускается в отдельном потоке для каждого подключившегося клиента. Она выполняет следующие шаги:
+1. Отправляет начальное состояние игры клиенту.
+2. Получает данные от клиента (например, ход игрока или другие команды).
+3. Обрабатывает полученный ход игрока с помощью функции 'process_player_move'.
+4. Генерирует лабиринт для первого подключившегося игрока, если это необходимо.
+5. Проверяет правильность кода игры, и если код неправильный, завершает игру и выводит сообщение.
+6. Рассылает обновленное состояние игры всем клиентам с помощью функции 'broadcast_game_state'.
+7. При завершении игры или отключении клиента очищает соединение и удаляет игрока из списка подключений.</p><table class="fieldTable"><tr class="fieldStart"><td class="fieldName" colspan="2">Parameters</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">conn:</span>socket.socket</td><td class="fieldArgDesc">Сетевое соединение с клиентом, через которое происходит обмен данными.</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">addr:</span>tuple</td><td class="fieldArgDesc">Адрес клиента, с которым установлено соединение.</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">player<wbr></wbr>_id:</span>int</td><td class="fieldArgDesc">Уникальный идентификатор игрока, назначаемый при подключении.</td></tr><tr class="fieldStart"><td class="fieldName" colspan="2">Returns</td></tr><tr><td colspan="2">None</td></tr><tr class="fieldStart"><td class="fieldName" colspan="2">Raises</td></tr><tr><td class="fieldArgContainer"><code>Exception</code></td><td>Если возникает ошибка при получении или обработке данных от клиента.</td></tr></table></div>
+  </div>
+</div><div class="basefunction">
+  
+  
+  <a name="final_final.server.main">
+    
+  </a>
+  <a name="main">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">main</span><span class="function-signature">()</span>:
+    
+    <a class="headerLink" href="#main" title="final_final.server.main">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p>Основная функция для запуска сервера игры. Она:
+1. Инициализирует сокет для приема TCP-соединений.
+2. Прослушивает указанный адрес (HOST) и порт (PORT).
+3. Ждет подключения двух игроков.
+4. Запускает обработку каждого игрока в отдельном потоке.
+5. Завершает ожидание после подключения двух игроков и стартует игровой процесс.</p><table class="fieldTable"><tr class="fieldStart"><td class="fieldName" colspan="2">Returns</td></tr><tr><td colspan="2">None</td></tr><tr class="fieldStart"><td class="fieldName" colspan="2">Raises</td></tr><tr><td class="fieldArgContainer"><code>socket.error</code></td><td>Если не удалось создать сокет или привязать его к указанному адресу и порту.</td></tr></table></div>
+  </div>
+</div><div class="basefunction">
+  
+  
+  <a name="final_final.server.process_player_move">
+    
+  </a>
+  <a name="process_player_move">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">process_player_move</span><span class="function-signature">(player_id, move)</span>:
+    
+    <a class="headerLink" href="#process_player_move" title="final_final.server.process_player_move">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p>Обрабатывает ход игрока.</p><table class="fieldTable"><tr class="fieldStart"><td class="fieldName" colspan="2">Parameters</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">player<wbr></wbr>_id:</span>int</td><td class="fieldArgDesc">Номер игрока</td></tr><tr><td class="fieldArgContainer"><span class="fieldArg">move:</span>str</td><td class="fieldArgDesc">Направление хода ("up", "down", "left", "right")</td></tr><tr class="fieldStart"><td class="fieldName" colspan="2">Returns</td></tr><tr><td colspan="2">None</td></tr></table></div>
+  </div>
+</div><div class="baseconstant">
+  
+  
+  <a name="final_final.server.HOST">
+    
+  </a>
+  <a name="HOST">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">HOST</span>: <code>str</code> =
+    
+    <a class="headerLink" href="#HOST" title="final_final.server.HOST">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    <table class="valueTable"><tr class="fieldStart"><td class="fieldName">Value</td></tr><tr><td><pre class="constant-value"><code><span class="rst-variable-quote">'</span><span class="rst-variable-string">0.0.0.0</span><span class="rst-variable-quote">'</span></code></pre></td></tr></table>
+  </div>
+</div><div class="baseconstant">
+  
+  
+  <a name="final_final.server.PORT">
+    
+  </a>
+  <a name="PORT">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">PORT</span>: <code>int</code> =
+    
+    <a class="headerLink" href="#PORT" title="final_final.server.PORT">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    <table class="valueTable"><tr class="fieldStart"><td class="fieldName">Value</td></tr><tr><td><pre class="constant-value"><code>65434</code></pre></td></tr></table>
+  </div>
+</div><div class="basevariable">
+  
+  
+  <a name="final_final.server.connections">
+    
+  </a>
+  <a name="connections">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">connections</span>: <code>dict</code> =
+    
+    <a class="headerLink" href="#connections" title="final_final.server.connections">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    
+  </div>
+</div><div class="basevariable">
+  
+  
+  <a name="final_final.server.game_state">
+    
+  </a>
+  <a name="game_state">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">game_state</span>: <code>dict</code> =
+    
+    <a class="headerLink" href="#game_state" title="final_final.server.game_state">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    
+  </div>
+</div><div class="basevariable">
+  
+  
+  <a name="final_final.server.lock">
+    
+  </a>
+  <a name="lock">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">lock</span> =
+    
+    <a class="headerLink" href="#lock" title="final_final.server.lock">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    
+  </div>
+</div>
+        </div>
+      
+      </div>
+    </div>
+
+    <footer class="navbar navbar-default">
+
+  
+  <div class="container-fluid">
+    <a href="index.html">API Documentation</a> for final_final,
+  generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a>
+    24.11.0 at 2024-12-16 08:29:57.
+  </div>
+
+  <!-- Search related scripts needs to be loaded at the end of HTML 
+    parsing not to introduce overhead and display HTML data asap -->
+  <script src="ajax.js" type="text/javascript"></script>
+  <script src="searchlib.js" type="text/javascript"></script>
+  <script src="search.js" type="text/javascript"></script>
+
+</footer>
+  
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

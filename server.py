@@ -4,7 +4,7 @@ import threading
 import random
 from dfsmaze import dfsmaze_generate
 
-HOST = '0.0.0.0'
+HOST = '127.0.0.1'
 PORT = 65434
 lock = threading.Lock()
 
@@ -148,7 +148,6 @@ def process_player_move(player_id, move):
     :param move: Направление хода ("up", "down", "left", "right")
     :type move: str
     :return: None
-    :raises ValueError: Если направление хода не является допустимым
     """
     global game_state
     with lock:
@@ -164,7 +163,7 @@ def process_player_move(player_id, move):
         elif move == "right":
             new_y, new_x = current_y, current_x + 1
         else:
-            raise ValueError(f"Invalid move direction: {move}")
+            return
 
         game_state["message"] = ""
 

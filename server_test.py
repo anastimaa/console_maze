@@ -94,9 +94,9 @@ def test_player_hits_mob(fixed_game):
 
 
 def test_player_opens_door_without_key(fixed_game):
-    result = process_player_move(1, "diagonally")
-    assert result is False
-    
+    with pytest.raises(ValueError):
+        process_player_move(1, "diagonally")
+        
 
 @pytest.fixture
 def mock_socket():

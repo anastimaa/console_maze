@@ -4,7 +4,7 @@ import threading
 import random
 from dfsmaze import dfsmaze_generate
 
-HOST = '127.0.0.1'
+HOST = '0.0.0.0'
 PORT = 65434
 lock = threading.Lock()
 

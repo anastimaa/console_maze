@@ -71,6 +71,9 @@ def generate_maze(level):
             })
         game_state["mobs"] = m
 
+        for mb in game_state["mobs"]:
+            maze[mb["y"]][mb["x"]] = "M"
+
         num_keys = random.randint(3, 5)
         for _ in range(num_keys):
             key_x = random.randint(1, width - 2)
@@ -79,24 +82,19 @@ def generate_maze(level):
                 key_x = random.randint(1, width - 2)
                 key_y = random.randint(1, height - 2)
             maze[key_y][key_x] = "K"
-            game_state["items"].append((key_x, key_y))
 
         door_positions = [(width - 3, height - 2), (width - 2, height - 3)]
         for dx, dy in door_positions:
-            if 1 <= dx < width - 1 and 1 <= dy < height - 1:
-                maze[dy][dx] = "\u2591"
+            maze[dy][dx] = "\u2591"
 
         num_gems = random.randint(3, 5)
         for _ in range(num_gems):
             gem_x = random.randint(1, width - 2)
             gem_y = random.randint(1, height - 2)
-            while maze[gem_y][gem_x] != "\u2588":
+            while maze[gem_y][gem_x] != " ":
                 gem_x = random.randint(1, width - 2)
                 gem_y = random.randint(1, height - 2)
             maze[gem_y][gem_x] = "\u25C7"
-
-        for mb in game_state["mobs"]:
-            maze[mb["y"]][mb["x"]] = "M"
 
         game_state["players"][1]["x"] = 1
         game_state["players"][1]["y"] = 1
@@ -165,7 +163,7 @@ def process_player_move(player_id, move):
         elif move == "right":
             new_y, new_x = current_y, current_x + 1
         else:
-            return False 
+            return False
 
         game_state["message"] = ""
 
@@ -268,7 +266,6 @@ def handle_client(conn, addr, player_id):
 
     except Exception as e:
         print(f"Error with Player {player_id}: {e}")
-        raise
 
     finally:
         conn.close()
